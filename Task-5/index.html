@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerTrack Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>CareerTrack Dashboard</h1>
+
+        <div class="stats">
+
+            <div class="card">
+                <h2 id="total">0</h2>
+                <p>Total</p>
+            </div>
+
+            <div class="card">
+                <h2 id="applied">0</h2>
+                <p>Applied</p>
+            </div>
+
+            <div class="card">
+                <h2 id="interview">0</h2>
+                <p>Interview</p>
+            </div>
+
+            <div class="card">
+                <h2 id="selected">0</h2>
+                <p>Selected</p>
+            </div>
+
+            <div class="card">
+                <h2 id="rejected">0</h2>
+                <p>Rejected</p>
+            </div>
+
+        </div>
+
+        <div class="form-section">
+
+            <input type="text"
+                   id="company"
+                   placeholder="Company Name">
+
+            <input type="text"
+                   id="role"
+                   placeholder="Job Role">
+
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+
+            <button onclick="addApplication()">
+                Add Application
+            </button>
+
+        </div>
+
+        <div class="filters">
+
+            <input type="text"
+                   id="search"
+                   placeholder="Search Company"
+                   onkeyup="displayApplications()">
+
+            <select id="filter"
+                    onchange="displayApplications()">
+
+                <option value="All">All</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+
+            </select>
+
+        </div>
+
+        <div id="applicationList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
